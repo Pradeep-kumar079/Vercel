@@ -28,7 +28,7 @@ body, html {
   display: flex;
   flex-direction: row;
   width: 900px;
-  max-width: 100%;
+  max-width: 90%;
   height: 500px;
   background: #ffffff;
   border-radius: 20px;
