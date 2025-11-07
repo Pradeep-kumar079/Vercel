@@ -12,7 +12,7 @@ exports.forgotPassword = async (req, res) => {
       return res.status(404).json({ success: false, message: "User not found" });
 
     const resetToken = crypto.randomBytes(20).toString("hex");
-    const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
+    const resetUrl = `${process.env.FRONTEND_URL}/auth/reset-password/${resetToken}`;
 
     user.resetPasswordToken = resetToken;
     user.resetPasswordExpire = Date.now() + 10 * 60 * 1000; // 10 mins
