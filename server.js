@@ -72,13 +72,13 @@ app.get("/api", (req, res) => {
 const __dirname1 = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
+  // Serve static files
   app.use(express.static(path.join(__dirname1, "client", "build")));
 
-// ✅ Handle all other routes (SPA fallback)
-app.use((req, res, next) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
-
+  // ✅ Express v5 catch-all route fix
+  app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname1, "client", "build", "index.html"));
+  });
 }
 
 // ✅ Socket.io setup
