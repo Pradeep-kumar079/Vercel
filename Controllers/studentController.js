@@ -62,7 +62,7 @@ const sendRequestController = async (req, res) => {
 
     await newRequest.save();
 
-    const backendUrl = process.env.BACKEND_URL || "https://vercel-kenj.onrender.com";
+    const backendUrl = process.env.BACKEND_URL || "http://localhost:5000";
     const acceptUrl = `${backendUrl}/api/student/accept-request/${token}`;
     const rejectUrl = `${backendUrl}/api/student/reject-request/${token}`;
 
