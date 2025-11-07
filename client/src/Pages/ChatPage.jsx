@@ -7,7 +7,7 @@ const ChatPage = () => {
   const [user, setUser] = useState(null);
 
   // ✅ Use Render backend (your actual URL)
-  const backend = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+  const backend = process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
 
   const fetchCurrentUser = async () => {
     try {

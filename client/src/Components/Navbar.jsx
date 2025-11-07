@@ -7,7 +7,7 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 
 const Navbar = () => {
   const BACKEND_URL =
-    process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+    process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
 
   const navigate = useNavigate();
   const [query, setQuery] = useState("");

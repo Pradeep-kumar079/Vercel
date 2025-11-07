@@ -14,7 +14,7 @@ const Profile = () => {
   const [currentUserId, setCurrentUserId] = useState(null);
   const [isConnected, setIsConnected] = useState(false);
   const [isRequestSent, setIsRequestSent] = useState(false);
-  const base_url = process.env.REACT_APP_BACKEND_URL || "http://localhost:5000";
+  const base_url = process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
 
   useEffect(() => {
     const fetchProfile = async () => {
