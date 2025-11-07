@@ -74,8 +74,9 @@ const __dirname1 = path.resolve();
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname1, "client", "build")));
 
-app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+// ✅ Handle all other routes (SPA fallback)
+app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 }
