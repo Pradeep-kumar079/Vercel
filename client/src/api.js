@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const backendUrl = "http://https://vercel-kenj.onrender.com:5000";
+const backendUrl = "https://vercel-kenj.onrender.com";
 
 const api = axios.create({
   baseURL: `${backendUrl}/api`,
