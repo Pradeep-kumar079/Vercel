@@ -22,16 +22,12 @@ mongoose
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
 
-/* 
-  ✅ CORS setup:
-  - Needed ONLY in local dev.
-  - In production, both frontend and backend share the same domain.
-*/
+// ✅ CORS setup
 const allowedOrigins = [
-  "https://vercel-kenj.onrender.com", // local dev
-  "https://vercel-kenj.onrender.com",
- // your netlify (optional if frontend not hosted separately)
+  "http://localhost:3000",
+  "https://vercel-kenj.onrender.com", // your Render domain
 ];
+
 app.use(
   cors({
     origin: function (origin, callback) {
@@ -48,6 +44,7 @@ app.use(
   })
 );
 
+// ✅ Routes
 const UserRoutes = require("./Routes/UserRoutes");
 const AccountRoutes = require("./Routes/AccountRoutes");
 const StudentRoutes = require("./Routes/StudentRoutes");
@@ -57,7 +54,6 @@ const AdminRoutes = require("./Routes/AdminRoutes");
 const SearchRoutes = require("./Routes/SearchRoutes");
 const ForgotRoutes = require("./Routes/ForgotRoutes");
 
-// ✅ Routes
 app.use("/api/user", UserRoutes);
 app.use("/api/account", AccountRoutes);
 app.use("/api/student", StudentRoutes);
@@ -67,22 +63,21 @@ app.use("/api/admin", AdminRoutes);
 app.use("/api/search", SearchRoutes);
 app.use("/api/auth", ForgotRoutes);
 
-// ✅ Root route
+// ✅ API Root Test
 app.get("/api", (req, res) => {
   res.send("✅ KIT Alumni backend is running fine");
 });
 
-/* 
-  ✅ Serve React build in production
-  (client/build folder will be created after running `npm run build` inside client/)
-*/
+/* ✅ Serve React frontend in production */
 const __dirname1 = path.resolve();
-app.use(express.static(path.join(__dirname1, "client", "build")));
 
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-});
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname1, "client", "build")));
 
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname1, "client", "build", "index.html"));
+  });
+}
 
 // ✅ Socket.io setup
 const server = http.createServer(app);
