@@ -9,7 +9,7 @@ const AcceptRequest = () => {
     const acceptRequest = async () => {
       try {
         const token = window.location.pathname.split("/").pop();
-        const base_url = process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
+        const base_url =   "https://vercel-kenj.onrender.com";
 
         const res = await axios.get(`${base_url}/api/student/accept-request/${token}`);
         if (res.data.success) {

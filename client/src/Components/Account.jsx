@@ -3,7 +3,7 @@ import axios from "axios";
 import Navbar from "./Navbar";
 import "./Account.css";
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
+const BACKEND_URL =   "https://vercel-kenj.onrender.com";
 
 
 const Account = () => {

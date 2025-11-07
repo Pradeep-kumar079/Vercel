@@ -11,7 +11,7 @@ const FindAlumni = () => {
   const [currentUserId, setCurrentUserId] = useState(null);
   const navigate = useNavigate();
 
-  const API_BASE = process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
+  const API_BASE =  "https://vercel-kenj.onrender.com";
   const defaultImg = "uploads/default.jpg";
 
   useEffect(() => {

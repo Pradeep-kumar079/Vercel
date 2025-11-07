@@ -5,7 +5,7 @@ import axios from "axios";
 import "./ForgotPass.css";
 
 const ResetPass = () => {
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const BACKEND_URL = "https://vercel-kenj.onrender.com";
 
   const { token } = useParams();
   const navigate = useNavigate();

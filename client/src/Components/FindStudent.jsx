@@ -9,7 +9,7 @@ const FindStudent = () => {
   const [loading, setLoading] = useState(true);
   const [currentUserId, setCurrentUserId] = useState(null);
   const navigate = useNavigate();
-  const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
+  const BACKEND_URL =  "https://vercel-kenj.onrender.com";
 
   useEffect(() => {
     const fetchStudents = async () => {

@@ -8,7 +8,7 @@ const Students = () => {
   const [batches, setBatches] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  const base_url = process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
+  const base_url = "https://vercel-kenj.onrender.com";
 
   useEffect(() => {
     const fetchStudentBatches = async () => {

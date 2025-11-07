@@ -37,7 +37,7 @@ const Admin = () => {
 
   // ✅ unified backend URL (works for local + production)
   // ✅ Automatically detect whether running locally or on Render
-const backend = process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
+const backend =  "https://vercel-kenj.onrender.com";
 
 
 

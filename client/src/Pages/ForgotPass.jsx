@@ -7,7 +7,7 @@ const ForgotPass = () => {
   const [msg, setMsg] = useState("");
   const [loading, setLoading] = useState(false);
 
- const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
+ const BACKEND_URL = "https://vercel-kenj.onrender.com";
 
 
   const handleSubmit = async (e) => {

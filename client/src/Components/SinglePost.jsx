@@ -11,7 +11,7 @@ const SinglePost = () => {
   const [user, setUser] = useState(null);
 
   // 🌐 Backend base URL (Render deployment)
-const base_url = process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
+const base_url =  "https://vercel-kenj.onrender.com";
 
 
   // ✅ Set authorization header if logged in

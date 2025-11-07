@@ -9,7 +9,7 @@ const SingleGallery = () => {
   const [galleryItem, setGalleryItem] = useState(null);
 
   // Deployed backend URL
- const base_url = process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
+ const base_url = "https://vercel-kenj.onrender.com";
 
 
   useEffect(() => {

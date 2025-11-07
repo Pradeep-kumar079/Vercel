@@ -4,7 +4,7 @@ import axios from "axios";
 import "./Post.css";
 
 const Post = () => {
- const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
+ const BACKEND_URL = "https://vercel-kenj.onrender.com";
   const [formData, setFormData] = useState({
     title: "",
     description: "",

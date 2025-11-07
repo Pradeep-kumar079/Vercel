@@ -8,7 +8,7 @@ const Gallary = () => {
   const navigate = useNavigate();
 
   // ✅ Use your deployed backend URL
- const base_url = process.env.REACT_APP_BACKEND_URL || "https://vercel-kenj.onrender.com";
+ const base_url = "https://vercel-kenj.onrender.com";
 
 
   const fetchGallery = async () => {
