@@ -184,9 +184,9 @@ button.btn:hover {
 
 /* 📱 Tablets Portrait */
 @media (max-width: 768px) {
-  .login-wrapper {
+  /* .login-wrapper {
     padding: 20px;
-  }
+  } */
 
   .login-container {
     width: 95%;
